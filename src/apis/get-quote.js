@@ -23,7 +23,7 @@ const getQuoteService = async () => {
     .catch(error => {
       if (error.response && error.reponse.data) {
         throw new APIRequestError(
-          'Error al generar una nueva frase.',
+          'Error al obtener una nueva frase de la api.',
           error.response.data
         );
       }
