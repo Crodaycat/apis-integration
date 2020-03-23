@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "zip -r build.zip node_modules src/*"
+    "build": "zip -FSr build.zip node_modules src/*"
   },
   "author": "Luis Giraldo",
   "license": "ISC",
