@@ -1,4 +1,4 @@
-const imagesAPIConfig = require('../config/quotes-api-config');
+const imagesAPIConfig = require('../config/images-api-config');
 
 const NotFoundError = require('../errors/not-found-error');
 const APIRequestError = require('../errors/api-request-error');
@@ -14,7 +14,7 @@ const getImageService = async query => {
     .then(response => {
       const items = response.data.items;
 
-      if (items.length < 1) {
+      if (!items || items.length < 1) {
         throw new NotFoundError(
           'No se ha podido generar una imagen para la frase.'
         );
