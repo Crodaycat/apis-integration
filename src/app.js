@@ -12,16 +12,17 @@ app.use(awsMiddleware.eventContext());
 
 app.use('/', routes);
 
-app.use(function(err, req, res) {
+app.use(function(err, req, res, next) {
   if (err.status) {
     res.status(err.status).send(err.errorDto());
   } else {
     res.status(500).send({
       status: 500,
       message: 'Error interno del servidor',
-      errorMessage: err.message
+      error: err.message
     });
   }
+  next(req, res, next);
 });
 
 module.exports = app;
