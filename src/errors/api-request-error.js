@@ -11,7 +11,7 @@ class APIRequestError extends Error {
   errorDto() {
     return {
       status: this.status,
-      message: super.message,
+      message: this.message,
       error: this.error
     };
   }
