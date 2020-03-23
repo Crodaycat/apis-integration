@@ -1,0 +1,19 @@
+{
+  "name": "api-integration",
+  "version": "1.0.0",
+  "description": "Integration api",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "zip -r build.zip node_modules src/*"
+  },
+  "author": "Luis Giraldo",
+  "license": "ISC",
+  "dependencies": {
+    "aws-serverless-express": "^3.3.6",
+    "axios": "^0.18.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0"
+  }
+}
